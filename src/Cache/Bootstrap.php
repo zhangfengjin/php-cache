@@ -17,8 +17,17 @@ class Bootstrap
         '\XYLibrary\Cache\CacheManagerServiceProvider' => '\XYLibrary\Cache\CacheManagerServiceProvider'
     ];
 
-    public function __construct()
+    protected $dirs = [
+        'form' => __DIR__ . "/../Config/",
+        'to' => __DIR__ . "/../../../../../Config/"
+    ];
+
+    public function __construct($initConfig = true)
     {
+        if ($initConfig && file_exists($this->dirs["form"])) {
+            //创建缓存基础配置文件
+            copyDir($this->dirs["form"], $this->dirs["to"]);
+        }
     }
 
     /**
