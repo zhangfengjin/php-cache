@@ -1,0 +1,24 @@
+{
+  "name": "php-cache/php-cache",
+  "type": "library",
+  "description": "php cache",
+  "keywords": [
+    "cache",
+    "php-cache"
+  ],
+  "authors": [
+    {
+      "name": "zhangfengjin",
+      "email": "793665131@qq.com"
+    }
+  ],
+  "require": {
+    "predis/predis": "^1.0",
+    "php-framework/php-framework": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "XYLibrary\\": "src/"
+    }
+  }
+}
