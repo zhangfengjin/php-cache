@@ -18,7 +18,7 @@ class Bootstrap
     ];
 
     protected $dirs = [
-        'form' => __DIR__ . "/../Config/",
+        'form' => __DIR__ . "/../../Config/",
         'to' => __DIR__ . "/../../../../../Config/"
     ];
 
