@@ -5,7 +5,7 @@
  * Date: 2017/11/23
  */
 require_once __DIR__ . "/../vendor/autoload.php";
-$bootStrap = new \XYLibrary\Cache\Bootstrap();
+$bootStrap = new \XYLibrary\Cache\Bootstrap(false);
 $bootStrap->bootStrap();
 
 \XYLibrary\Cache\Facade\Cache::put("username1", "zfj" . time() . rand(1, 5), 1);
