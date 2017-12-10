@@ -5,13 +5,8 @@
  * Date: 2017/11/23
  */
 require_once __DIR__ . "/../vendor/autoload.php";
-//需要注册到类库中的服务
-$bootStraps = [
-    '\XYLibrary\Cache\CacheManagerServiceProvider' => '\XYLibrary\Cache\CacheManagerServiceProvider'
-];
-//缓存调用方式-启动XYLibrary类库
-$bootStrap = new \XYLibrary\Bootstrap\Bootstrap();
-$bootStrap->bootstrap($bootStraps);
+$bootStrap = new \XYLibrary\Cache\Bootstrap();
+$bootStrap->bootStrap();
 
 \XYLibrary\Cache\Facade\Cache::put("username1", "zfj" . time() . rand(1, 5), 1);
 \XYLibrary\Cache\Facade\Cache::put("username2", "zfj" . time() . rand(5, 10), 1);
